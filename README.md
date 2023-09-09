@@ -1,23 +1,7 @@
-# Nix Home Manager Option Search
+# NixNeovim Options Search
 
-Find home manager options quickly.
-
-![](images/homemanageroptionsearch.gif)
-
-## TODO
-
-### Next version
-
-- [ ] community repo
-- [ ] port to MUI.com
-- [ ] be aware of multiple home manager versions
-
-## Contribute
-
-- Please use the issue tracker of fork this site for PR's
+This is a search for [NixNeovim](https://github.com/NixNeovim/NixNeovim) options.
 
 ## Credits
 
-- Powered by the [Nix Community](https://nix-community.org/)
-- [JS Search](https://github.com/bvaughn/js-search), efficient, client-side search library for JavaScript and JSON objects
-- Header inspired by the [DocDock](https://docdock.vjeantet.fr/) Hugo Theme.
+- This is forked from [home-manager-option-search](https://github.com/mipmip/home-manager-option-search)
