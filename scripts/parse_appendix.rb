@@ -3,7 +3,8 @@ require 'nokogiri'
 require 'json'
 require 'pp'
 
-url = 'https://nix-community.github.io/home-manager/options.html'
+# url = 'https://nix-community.github.io/home-manager/options.html'
+url = "https://nixneovim.github.io/NixNeovim/options.html"
 html = URI.open(url)
 doc = Nokogiri::HTML(html)
 
