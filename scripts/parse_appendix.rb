@@ -55,7 +55,7 @@ data.search('dt').each do |dt|
         end
         declare_arr.each do | decl |
           # decllink = 'https://github.com/nix-community/home-manager/blob/master/' + decl.gsub('<home-manager/','').gsub('>','')
-          decllink = 'https://github.com/NixNeovim/NixNeovim/blob/main/' + decl#.gsub('<plugins/','').gsub('>','')
+          decllink = 'https://github.com/NixNeovim/NixNeovim/blob/main/' + decl.gsub('<nixneovim/','').gsub('>','')
           decltext = decl.gsub('<','').gsub('>','')
           option_declared_by_link += '<a href="'+decllink+'">'+decltext+'</a><br/>'
         end
