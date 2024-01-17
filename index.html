@@ -9,7 +9,7 @@
     <link rel="search" type="application/opensearchdescription+xml" title="NixNeovim - Option Search" href="opensearch.xml" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script async defer data-website-id="58f01126-9377-43dc-aec9-25a9091ecf20" src="https://umami.poppygo.io/umami.js"></script>
+    <script async src="https://umami.pimsnel.com/script.js" data-website-id="8e970d59-b517-4ba6-9b92-207e7dbdb4b1"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="css/nucleus.css" rel="stylesheet">
     <link href="css/style-nix.css" rel="stylesheet">
@@ -18,24 +18,24 @@
   <body>
 
     <header>
-      <div id="lastUpdateElement" style="position:absolute; line-height: 11px;color: #000; right: 37px;top:59px;font-size:10px;"></div>
+      <div id="lastUpdateElement" style="position:absolute; line-height: 11px; right: 37px;top:59px;"></div>
       <div class="logo">
-        <a class="baselink" href="./"> <img src="https://avatars.githubusercontent.com/u/120017835?s=200&v=4"></a>
+        <a class="baselink" href="./"> <img src="images/home-manager-option-search2.png"></a>
       </div>
       <nav class="shortcuts">
-        <li class="" role="">
+        <li style="padding-top:10px;">
           <a href="https://github.com/NixNeovim/NixNeovim" rel="noopener">
-            <i class="fa fa-book"></i> <label>NixNeovim</label>
+            <i class="fa fa-book"></i>&nbsp;<label>HM&nbsp;Documentation</label>
           </a>
         </li>
 
-        <li class="" role="">
-          <a href="https://github.com/NixNeovim/nixneovim-option-search" rel="noopener">
+        <li  style="padding-top:10px;">
+          <a href="https://github.com/mipmip/home-manager-option-search" rel="noopener">
             <i class="fa fa-github"></i> <label>Source</label>
           </a>
         </li>
 
-        <li class="" style="margin-left:9px;padding-top:4px;" role="">
+        <li style="margin-left:9px;padding-top:14px;">
           <iframe style="width:51px;" src="https://ghbtns.com/github-btn.html?user=NixNeovim&repo=nixneovim-option-search&type=star&count=false&text=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
         </li>
       </nav>
@@ -62,7 +62,7 @@
         </div>
       </div>
 
-      <div id="searchform" style="background-color: white;top:54px;position:sticky;>
+      <div id="searchform" xstyle="background-color: white;top:54px;position:sticky;>
         <form method="get" action="?" onSubmit="searchEnter()">
           <div class="form-group">
             <label for="searchInput">
@@ -80,7 +80,7 @@
           </div>
         </form>
 
-        <div class="collapse" id="advanced" style="background-color: #efefef ;padding:2px;">
+        <div class="collapse" id="advanced" >
           <ul class="list-inline" style="margin-top:5px;margin-bottom:5px;">
             <li>Search in</li>
             <li><input type="checkbox" checked id="indexOnTitleCheckbox"> Title</li>
@@ -100,8 +100,8 @@
           <thead>
             <tr>
               <th>Title</th>
-              <th>Description</th>
-              <th>Type</th>
+              <th class="phonehide">Description</th>
+              <th class="phonehide">Type</th>
             </tr>
           </thead>
           <tbody>
@@ -150,7 +150,8 @@
     <!-- </footer> -->
 
     <!--<script type="text/javascript" src="https://rawgit.com/kristopolous/Porter-Stemmer/master/PorterStemmer1980.min.js"></script>-->
-    <script type="text/javascript" src="https://unpkg.com/js-search@1.3.7/dist/umd/js-search.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <!--<script type="text/javascript" src="https://unpkg.com/js-search@1.3.7/dist/umd/js-search.min.js"></script>-->
+    <script type="text/javascript" src="https://unpkg.com/js-search@2.0.1/dist/umd/js-search.min.js"></script>
+    <script type="text/javascript" src="js/script.js?version=2023-12-12"></script>
   </body>
 </html>
