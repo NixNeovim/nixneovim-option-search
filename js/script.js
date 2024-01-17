@@ -27,7 +27,7 @@ indexOnTitleCheckbox.onchange = rebuildAndRerunSearch;
 indexStrategySelect.onchange = rebuildAndRerunSearch;
 
 var rebuildSearchIndex = function() {
-  search = new JsSearch.Search('description');
+  search = new JsSearch.Search('title');
 
   search.indexStrategy =  eval('new ' + indexStrategySelect.value + '()');
   search.searchIndex = new JsSearch.UnorderedSearchIndex();
@@ -67,9 +67,11 @@ var updateOptionsTable = function(options) {
 
     var descriptionColumn = document.createElement('td');
     descriptionColumn.innerHTML = option.description;
+    descriptionColumn.classList.add("phonehide");
 
     var typeColumn = document.createElement('td');
     typeColumn.innerHTML = option.type;
+    typeColumn.classList.add("phonehide");
 
     var tableRow = document.createElement('tr');
 
@@ -138,11 +140,19 @@ var searchOptions = function(query) {
   updateOptionCountAndTable();
 };
 
-searchInput.oninput =  function () {
-  const query = searchInput.value;
-  setSearchQueryToUrlParam(query);
-  searchOptions(query);
-}
+const SEARCH_INPUT_DEBOUNCE_MS = 100;
+
+let debounceTimer;
+
+searchInput.oninput = function() {
+  clearTimeout(debounceTimer);
+
+  debounceTimer = setTimeout(() => {
+    const query = searchInput.value;
+    setSearchQueryToUrlParam(query);
+    searchOptions(query);
+  }, SEARCH_INPUT_DEBOUNCE_MS);
+};
 
 var updateOptionCount = function(numOptions) {
   optionCountBadge.innerText = numOptions + ' options';
